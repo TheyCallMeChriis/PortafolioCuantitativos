@@ -517,12 +517,12 @@
 
         /* ── STEP / EXPLANATION BOXES ─────────────────── */
         div[style*="background-color: #f9f9f9"]:not([style*="font-family"]) {
-    background: #f4f4f4 !important;
-    border-left: 3px solid var(--purple-lt) !important;
-    border-radius: 10px;
-    padding: 18px 22px !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
+            background: #f4f4f4 !important;
+            border-left: 3px solid var(--purple-lt) !important;
+            border-radius: 10px;
+            padding: 18px 22px !important;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
 
         div[style*="background-color: #f9f9f9"][style*="border-left: 5px solid #003366"] {
             border-left: 3px solid var(--sidebar-bg) !important;
@@ -534,33 +534,44 @@
             border-radius: 12px;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10), 0 1px 4px rgba(0, 0, 0, 0.06);
         }
+
         /* Ajustes para móviles (pantallas menores a 768px) */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
 
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        z-index: 1000;
-    }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                z-index: 1000;
+            }
 
-    .main-content {
-        margin-left: 0;
-        width: 100%;
-        padding: 20px;
-    }
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 20px;
+            }
 
-    .section-container.active {
-        padding: 20px;
-    }
+            .section-container.active {
+                padding: 20px;
+            }
 
-    .cover-grid {
-        grid-template-columns: 1fr; /* Una sola columna en móviles */
-    }
-}
+            .cover-grid {
+                grid-template-columns: 1fr;
+                /* Una sola columna en móviles */
+            }
+
+            .table-responsive {
+                overflow-x: auto;
+                margin: 20px 0;
+                -webkit-overflow-scrolling: touch;
+                /* Esto hace que el scroll sea fluido en iPhone/Android */
+                border: 1px solid #ddd;
+                /* Opcional: para que se note el borde del contenedor */
+            }
+        }
     </style>
 </head>
 
@@ -1186,7 +1197,7 @@
                 </tr>
             </table>
 
-            
+
 
             <hr style="border: 1px solid #eee; margin: 30px 0;">
 
